@@ -89,3 +89,15 @@ tenmil.forEach(function(item,index){
 var tim2f = new Date();
 var diff1f = tim2f - tim1f;
 console.log('~function(){}(); took: ' + diff1f);
+
+var tim1g = new Date();
+tenmil.forEach(function(item,index){
+  new function(){ var i = 0; index++; }
+});
+var tim2g = new Date();
+var diff1g = tim2g - tim1g;
+console.log('  new function(){} took: ' + diff1g);
+
+
+
+  new function(){ /* code */ }
